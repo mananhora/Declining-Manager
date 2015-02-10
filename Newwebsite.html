@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+  <title >Declining Planner</title>
+  <script type = "text/javascript" src ="backend.js" language="javascript">
+
+</script>
+   <script> 
+
+function run() {
+  var x = document.getElementById("textbox").value;
+  var y = parseInt(x, 10);
+  var partial = [0];
+  var numbers = [1,2,3,4,5,6,7,8];
+  var store = sumupR(numbers, y, partial);
+  console.log(store);
+  for(var i = 0; i<store.length; i++){
+    var t = document.getElementById("Output");
+    var text = document.createTextNode(JSON.stringify(store[i], null, '\t'));
+    t.appendChild(text);
+    // document.getElementById("Output").innerHTML = JSON.stringify(store[i], null, '\n');
+  }
+// var textarea = document.getElementById("Output")
+// textarea.value = store.join("\n");
+}
+
+
+</script>
+</head>
+
+<body>
+
+
+  <h1 size = "50">URexpense</h1>
+
+  <p>
+
+  <pre>
+ Enter your food budget for today and explore the different combinations of items you can buy!..
+  <form>
+     <pre>
+  Declining Amount :
+
+   <input id = "textbox" maxlength="2" align= "center" size = "5" type = "number" >
+
+
+   <button onclick="run()" type = "button"> SUBMIT</button>
+
+      <button onclick="run()" type = "button"> SUBMIT</button>
+
+
+
+
+<p id = "Output">
+
+
+</p>
+<script ></script>>
+   </pre>
+  </form>
+
+  
+
+  </p>
+
+</body>
+
+</html>
