@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+  <title >Declining Planner</title>
+    <link href="style.css" rel="stylesheet">
+
+  <script type = "text/javascript" src ="backend.js" language="javascript"></script>
+   <script> 
+
+function run() {
+  var x = document.getElementById("textbox").value;
+  if(typeof(x)==="String"){
+     document.getElementById("Output").innerHTML = "Please enter a number!";
+  }
+  var y = parseInt(x, 10);
+  var partial = [];
+  var numbers = [1,2,3,4,5,6,7,8];
+  var store = sumupR(numbers, y, partial);
+  for(var i = 0; i<store.length; i++){
+    var t = document.getElementById("Output");
+    var text = document.createTextNode('\n\n' + JSON.stringify(store[i]));
+    // text.replace("[","");
+    // text.nodeValue.replace("["," ");
+    var e = text.length;
+    // text.replaceData(e-1,e,"");
+    //     text.replaceData(2,2, "");
+
+    t.appendChild(text);
+
+  }
+}
+   
+</script>
+
+</head>
+
+<body>
+     <h1>Declining Budget</h1>
+     
+     <p>
+Enter how much you want to spend on food today to get the different combinations of things you can buy          <form>
+          <input id = "textbox" maxlength="2" align= "center" size = "8" type = "number" placeholder="Amount b/w 1 and 20">
+
+         
+
+
+          <button onclick="run()" type = "button">Get My Options</button>
+               
+               <pre>     
+                    <p id="Output"></p>
+                    <script></script>
+               </pre>
+          </form>
+     </p>
+     <div style="position: relative; text-align:left">
+      <p style="position: relative; bottom: 0; width:100%;"> This website has been built by Manan Hora</p>
+    </div>
+</div>
+</body>
+
+</html>
