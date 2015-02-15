@@ -109,10 +109,10 @@ s = s + x;
 
 
 var numbers = [1,2,3,4,5,6,7,8,9];
-var target = 12;
-var p = [];
-	 sumupR(numbers, target, p);
-	 console.log(count);
+// var target = 1;
+// var p = [];
+// 	 sumupR(numbers, target, p);
+// 	 console.log(count);
 
 
 
